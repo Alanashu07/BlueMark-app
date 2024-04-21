@@ -1,0 +1,38 @@
+{
+    "provider": "google_pay",
+    "data": {
+      "environment": "LIVE",
+      "apiVersion": 2,
+      "apiVersionMinor": 0,
+      "allowedPaymentMethods": [
+        {
+          "type": "CARD",
+          "tokenizationSpecification": {
+            "type": "PAYMENT_GATEWAY",
+            "parameters": {
+              "gateway": "stripe",
+              "stripe:version": "2018-10-31",
+              "stripe:publishableKey": "pk_live_51NcuCISJ9wXxWoxe1oORVBs72JfPnmw7eEaWMoQPyrUygmLxqTbmzZZELPEDCgxuIxwUZyp2Irauubfu881TD2kt00E7NX25cN"
+            }
+          },
+          "parameters": {
+            "allowedCardNetworks": ["VISA", "MASTERCARD"],
+            "allowedAuthMethods": ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+            "billingAddressRequired": true,
+            "billingAddressParameters": {
+              "format": "FULL",
+              "phoneNumberRequired": true
+            }
+          }
+        }
+      ],
+      "merchantInfo": {
+        "merchantId": "BCR2DN4TZ3Q4JXIF",
+        "merchantName": "Blue Mark"
+      },
+      "transactionInfo": {
+        "countryCode": "IN",
+        "currencyCode": "INR"
+      }
+    }
+  }
